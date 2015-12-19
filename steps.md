@@ -21,3 +21,21 @@
          @import "ui";
          @import "header";
 
+1. Create "home" and "user" routes
+   * `ember g route home`
+   * `ember g route user`
+
+1. Use `{{#link-to "route-name"}}Text{{/link-to}}` to create inpage anchors
+
+1. Its possible to customize a route path
+
+       this.route('user', { path: 'profile' });
+1. Create nested routes with a slash
+
+       ember g route user/followers
+       ember g route user/following
+
+1. Create default index users template
+
+       ember g route user/index
+
