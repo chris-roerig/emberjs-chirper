@@ -145,3 +145,31 @@
 
         chirpsSorting: ['createdAt:desc'],
         sortedChirps: Ember.computed.sort('chirps', 'chirpsSorting')
+
+1. Find ember add-ons [here](http://www.emberaddons.com/)
+   * restart ember server after install add-ons
+
+1. Install ember moment.js add-on `ember install ember-moment`
+
+1. To install libs not offered as ember add-ons:
+   * fetch it via bower (prefered) `bower install sweetalert --save`
+   * Update `ember-cli-build.js` so it includes the new lib files
+
+         // ember-cli-build.js
+
+        var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+        module.exports = function(defaults) {
+          var app = new EmberApp(defaults, {
+            // Add options here
+          });
+
+          // The 2 lines that you need to add!
+          app.import('bower_components/sweetalert/dist/sweetalert.min.js');
+          app.import('bower_components/sweetalert/dist/sweetalert.css');
+
+          return app.toTree();
+        };
+
+   * Restart ember server
+
