@@ -5,6 +5,6 @@ export default Ember.Route.extend({
         return Ember.RSVP.hash({
             user: this.store.findRecord('user', 1),
             chirps: this.store.findAll('chirp')
-        })
+        });
     }
 });
