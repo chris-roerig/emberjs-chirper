@@ -2,7 +2,7 @@
 
 <div class='stats-container'>
     <div class='page-container'>
-        <img class='avatar' src='/images/avatar.jpg' />
+        <img class="avatar" src="/images/avatar.jpg" data-profile-image="me"/>
         <ul class='profile-stats'>
             {{#link-to "user.index" tagName="li"}}
                 <h4>Chirps</h4>
@@ -29,6 +29,6 @@
         <p class='joined'>Joined {{moment-from-now model.user.joinedAt}}</p>
     </aside>
     <main>
-       {{outlet}}
+       {{liquid-outlet}}
     </main>
 </div>
